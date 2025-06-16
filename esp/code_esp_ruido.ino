@@ -3,11 +3,11 @@
 
 
 // Configurações Wi-Fi
-const char* ssid = "EraldoCesar2";
-const char* password = "19611616@Cesar";
+const char* ssid = "ssid";
+const char* password = "password";
 
 // MQTT Broker
-const char *mqtt_server = "192.168.0.19";
+const char *mqtt_server = "ip broker mosquitto";
 const char *Topico_Bomba_Status = "irrigacao/bomba/status"; 
 const char *Topico_Sensor_Umidade = "irrigacao/sensor_umidade";
 
