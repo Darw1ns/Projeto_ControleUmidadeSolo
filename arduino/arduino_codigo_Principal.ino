@@ -8,8 +8,8 @@ const float UMIDADE_PARA_DESLIGAR = 60.0;
 
 // --- INTERVALOS DE TEMPO ---
 const unsigned long DELAY_COM_BOMBA = 5000UL;     // 5 segundos quando a bomba está LIGADA
-//const unsigned long DELAY_SEM_BOMBA = 8UL * 60UL * 60UL * 1000UL / 3UL; // 8 horas dividido por 3 → Aprox. 2h40min
-const unsigned long DELAY_SEM_BOMBA = 20000UL; // 20 segundos quando esta desligada para testes. 
+const unsigned long DELAY_SEM_BOMBA = 8UL * 60UL * 60UL * 1000UL / 3UL; // 8 horas 
+//const unsigned long DELAY_SEM_BOMBA = 20000UL; // 20 segundos quando esta desligada para testes. 
 bool bombeandoParaIdeal = false;
 
 void setup() {
