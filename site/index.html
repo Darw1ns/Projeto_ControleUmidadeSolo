@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/mqtt/dist/mqtt.min.js"></script>
+    <title>Rega automática</title>
+    <meta name="description" content="Monitoramento da irrigação">
+    <link rel="stylesheet" href="/CSS/style.css">
+</head>
+<body>
+
+    <header class="header1">
+        <img class="logo" src="./img/logo-5.png" alt="logo" width="250px" height="250px">
+        <nav>
+            <ul class="header1_menu">
+                <li class="item-lista"><a href="#materiais">Materiais</a></li>
+                <li class="item-lista"><a href="#produto">Produto</a></li>
+                <li class="item-lista"><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="introducao">
+        <img class="planta" src="./img/planta-3.png" alt="planta" width="1100" height="1100">
+        <div class="titulo">
+            <h1>Rega <br> Automática</h1>
+        </div>
+
+    </main>
+
+    <section class="materiais" id="materiais" aria-label="materiais" >
+
+        <h2 class="subtitulo">Materiais</h2>
+    <div>
+          <p class="materiais-texto">Sistema de rega manipulado por um microcontrolador. Aqui você irá
+            ver materiais ultilizados e detalhes do funcionamento
+            </p>
+
+            <ul class="materiais-lista">
+                <li class="material">
+                    <span class="material-tipo">Sensor</span>
+                    <img src="/img/umidade.svg" alt="porcentagem de umidade">
+                    <span class="material-modelo">Detector de resistividade da terra</span>
+                </li>
+
+                <li class="material">
+                    <span class="material-tipo">Motor</span>
+                    <img src="/img/motor.svg" alt="bomba d'água">
+                    <span class="material-modelo">Mini bomba d'água submersiva</span>
+                </li>
+
+                <li class="material">
+                    <span class="material-tipo">Arduino</span>
+                    <img src="/img/placa.svg" alt="processador">
+                    <span class="material-modelo">Placa uno - Wi-fi ATmega328</span>
+                </li>
+            </ul>
+
+    </div>
+    </section>
+             
+    <section class="produto" id="produto" aria-label="Produto">
+        <div class="produto-container">
+          <h2 class="subtitulo">Produto</h2>
+      
+          <p class="produto-texto">
+            Aqui você pode acompanhar detalhes sobre o 
+            <a class="link-video" href="https://youtu.be/FGrN8tdAhi8?si=WwFWnc_drprcU95x">funcionamento</a> 
+            do dispositivo, e obter algumas informações extras.
+          </p>
+ 
+          <!-- Container para os dois blocos lado a lado -->
+          <div class="coluna-container">
+      
+            <!-- Bloco da bomba -->
+            <div class="coluna" id="bomba"> 
+              <p class="titulo-coluna">Umidade</p>
+              <img src="./img/bomba.png" alt="bomba d'água" width="200">
+              <p id="umidade" class="mensagem">Nível de umidade do solo: aguardando dados...</p>
+            </div>
+      
+            <!-- Bloco do estado do solo -->
+            <div class="coluna" id="estado-solo">
+              <!-- Esses "estado" ficam ocultos por padrão e você pode mostrar via JavaScript -->
+              <div class="estado" id="solo-feliz" style="display: block;">
+                <p class="titulo-coluna">Estado do solo</p>
+                <img class="walter" id="w1" src="/img/walter-1.png" alt="Walter feliz" width="200" height="200">
+                <p class="mensagem">Suas plantas estão felizes!</p>
+              </div>
+      
+              <div class="estado" id="solo-muito-umido">
+                <p class="titulo-coluna">Estado do solo</p>
+                <img class="walter" id="w5" src="/img/walter-5.png" alt="Walter afogando" width="200" height="200">
+                <p class="mensagem">Suas plantas estão se afogando!</p>
+              </div>
+      
+              <div class="estado" id="solo-seco">
+                <p class="titulo-coluna">Estado do solo</p>
+                <img class="walter" id="w4" src="/img/walter-4.png" alt="Walter triste" width="200" height="200">
+                <p class="mensagem">Suas plantas estão com sede!</p>
+              </div>
+            </div>
+
+            <div class="coluna"> 
+              <p class="titulo-coluna">Água consumida/mês</p>
+              <img class="galao" src="./img/galão.png" alt="galão" width="200">
+              <p class="mensagem" id="consumo">X litros</p>
+            </div>
+      
+          </div>
+        </div>
+      </section>
+      
+    <footer class="footer" id="contato">
+        <div class="footer-container">
+            <p class="footer-texto">Entre em contato para fazer o orçamento.
+                </p>
+                <ul class="footer-contato">
+                    <li class="gmail">xxxxx@gmail.com</li>
+                    <li class="tel">+55 21 00000-0000</li>
+                </ul>
+                <p class="footer-copy">alguns direitos reservados.</p>
+        </div>
+    </footer>
+    
+</body>
+<script src="./script.js"></script>
+</html> 
